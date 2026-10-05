@@ -1,0 +1,12 @@
+[
+  {"id": "US", "name": "United States", "currency": "USD", "timezone": "America/New_York"},
+  {"id": "UK", "name": "United Kingdom", "currency": "GBP", "timezone": "Europe/London"},
+  {"id": "DE", "name": "Germany", "currency": "EUR", "timezone": "Europe/Berlin"},
+  {"id": "FR", "name": "France", "currency": "EUR", "timezone": "Europe/Paris"},
+  {"id": "JP", "name": "Japan", "currency": "JPY", "timezone": "Asia/Tokyo"},
+  {"id": "AU", "name": "Australia", "currency": "AUD", "timezone": "Australia/Sydney"},
+  {"id": "CA", "name": "Canada", "currency": "CAD", "timezone": "America/Toronto"},
+  {"id": "BR", "name": "Brazil", "currency": "BRL", "timezone": "America/Sao_Paulo"},
+  {"id": "IN", "name": "India", "currency": "INR", "timezone": "Asia/Kolkata"},
+  {"id": "SG", "name": "Singapore", "currency": "SGD", "timezone": "Asia/Singapore"}
+]

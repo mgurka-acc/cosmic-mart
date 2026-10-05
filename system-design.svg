@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="700" viewBox="0 0 1440 700"
+     xmlns="http://www.w3.org/2000/svg"
+     style="font-family: Inter, system-ui, -apple-system, sans-serif; background:#020213;">
+
+  <defs>
+    <!-- Arrow markers -->
+    <marker id="ab" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#4d8cff" opacity="0.85"/>
+    </marker>
+    <marker id="ap" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#8b5cf6" opacity="0.85"/>
+    </marker>
+    <marker id="ag" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#00d4a0" opacity="0.85"/>
+    </marker>
+    <marker id="apd" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#8b5cf6" opacity="0.5"/>
+    </marker>
+    <marker id="agd" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#00d4a0" opacity="0.5"/>
+    </marker>
+
+    <!-- Gradients -->
+    <radialGradient id="g1" cx="12%" cy="15%" r="45%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4d1fa0" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#020213" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="88%" cy="85%" r="45%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#020213" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ═══ BACKGROUND ═══ -->
+  <rect width="1440" height="700" fill="#020213"/>
+  <rect width="1440" height="700" fill="url(#g1)"/>
+  <rect width="1440" height="700" fill="url(#g2)"/>
+
+  <!-- ═══ STAGE BANDS ═══ -->
+  <!-- S1: LISTEN -->
+  <rect x="1" y="78" width="553" height="597" rx="3"
+        fill="rgba(77,140,255,0.025)" stroke="rgba(77,140,255,0.1)" stroke-width="1"/>
+  <!-- S2: EXTRACT -->
+  <rect x="555" y="78" width="280" height="597" rx="3"
+        fill="rgba(139,92,246,0.025)" stroke="rgba(139,92,246,0.1)" stroke-width="1"/>
+  <!-- S3: ACT -->
+  <rect x="836" y="78" width="602" height="597" rx="3"
+        fill="rgba(0,212,160,0.025)" stroke="rgba(0,212,160,0.1)" stroke-width="1"/>
+
+  <!-- ═══ TITLE ═══ -->
+  <text x="720" y="38" text-anchor="middle" font-size="21" font-weight="600" fill="#eeeeff" letter-spacing="-0.4">
+    Cosmic Mart — AI Agent System Architecture
+  </text>
+  <text x="720" y="62" text-anchor="middle" font-size="12" fill="#6e7699">
+    Three-stage agentic pipeline · FastAPI backend + React frontend · Mock mode (USE_MOCK=true) or live Claude API
+  </text>
+
+  <!-- Stage labels -->
+  <text x="278" y="100" text-anchor="middle" font-size="10" font-weight="600" fill="#4d8cff" letter-spacing="3.5">STAGE 1 · LISTEN</text>
+  <text x="695" y="100" text-anchor="middle" font-size="10" font-weight="600" fill="#8b5cf6" letter-spacing="3.5">STAGE 2 · EXTRACT</text>
+  <text x="1137" y="100" text-anchor="middle" font-size="10" font-weight="600" fill="#00d4a0" letter-spacing="3.5">STAGE 3 · ACT</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COMPONENT: Customer                     -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="18" y="278" width="112" height="86" rx="10"
+        fill="rgba(7,7,30,0.95)" stroke="rgba(77,140,255,0.4)" stroke-width="1.5"/>
+  <!-- head -->
+  <circle cx="74" cy="302" r="13" fill="none" stroke="#4d8cff" stroke-width="1.5" opacity="0.7"/>
+  <!-- shoulders -->
+  <path d="M52 326 Q74 316 96 326" fill="none" stroke="#4d8cff" stroke-width="1.5" opacity="0.7"/>
+  <text x="74" y="349" text-anchor="middle" font-size="11.5" font-weight="600" fill="#eeeeff">Customer</text>
+  <text x="74" y="363" text-anchor="middle" font-size="9.5" fill="#6e7699">Browser / UI</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COMPONENT: ChatWidget                   -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="155" y="244" width="160" height="130" rx="10"
+        fill="rgba(7,7,30,0.95)" stroke="rgba(77,140,255,0.5)" stroke-width="1.5"/>
+  <!-- header strip -->
+  <rect x="155" y="244" width="160" height="26" rx="10" fill="rgba(77,140,255,0.12)"/>
+  <rect x="155" y="260" width="160" height="10" fill="rgba(77,140,255,0.12)"/>
+  <text x="235" y="261" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4d8cff" letter-spacing="1.5">REACT</text>
+  <text x="235" y="285" text-anchor="middle" font-size="13" font-weight="600" fill="#eeeeff">ChatWidget</text>
+  <text x="235" y="303" text-anchor="middle" font-size="9.5" fill="#8888b8">Streaming SSE reader</text>
+  <text x="235" y="319" text-anchor="middle" font-size="9.5" fill="#8888b8">Region/market selector</text>
+  <text x="235" y="335" text-anchor="middle" font-size="9.5" fill="#8888b8">Route: / (customer-facing)</text>
+  <text x="235" y="351" text-anchor="middle" font-size="9" fill="#5a5a90">fetch → localhost:8000</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COMPONENT: Nova Support Agent           -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="345" y="138" width="192" height="380" rx="10"
+        fill="rgba(7,7,30,0.95)" stroke="rgba(77,140,255,0.6)" stroke-width="1.5"/>
+  <!-- header -->
+  <rect x="345" y="138" width="192" height="26" rx="10" fill="rgba(77,140,255,0.15)"/>
+  <rect x="345" y="154" width="192" height="10" fill="rgba(77,140,255,0.15)"/>
+  <text x="441" y="154" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4d8cff" letter-spacing="1.5">FASTAPI · ANTHROPIC SDK</text>
+  <text x="441" y="178" text-anchor="middle" font-size="13.5" font-weight="600" fill="#eeeeff">Nova Support Agent</text>
+  <text x="441" y="196" text-anchor="middle" font-size="9.5" fill="#8888b8">Agentic loop with tool use</text>
+  <text x="441" y="212" text-anchor="middle" font-size="9.5" fill="#8888b8">StreamingResponse (SSE)</text>
+  <text x="441" y="228" text-anchor="middle" font-size="9" fill="#5a5a90">claude-sonnet-4-6 (live) · mock (keyword)</text>
+
+  <!-- divider -->
+  <line x1="360" y1="242" x2="522" y2="242" stroke="rgba(77,140,255,0.2)" stroke-width="1"/>
+  <text x="441" y="257" text-anchor="middle" font-size="9" font-weight="700" fill="#5a5a90" letter-spacing="2">TOOL USE</text>
+
+  <!-- tool chips -->
+  <rect x="358" y="264" width="166" height="22" rx="5"
+        fill="rgba(77,140,255,0.08)" stroke="rgba(77,140,255,0.22)" stroke-width="1"/>
+  <text x="441" y="279" text-anchor="middle" font-size="9.5" fill="#b8b8d8">search_product_catalog</text>
+
+  <rect x="358" y="292" width="166" height="22" rx="5"
+        fill="rgba(77,140,255,0.08)" stroke="rgba(77,140,255,0.22)" stroke-width="1"/>
+  <text x="441" y="307" text-anchor="middle" font-size="9.5" fill="#b8b8d8">get_order_status</text>
+
+  <rect x="358" y="320" width="166" height="22" rx="5"
+        fill="rgba(77,140,255,0.08)" stroke="rgba(77,140,255,0.22)" stroke-width="1"/>
+  <text x="441" y="335" text-anchor="middle" font-size="9.5" fill="#b8b8d8">submit_return_request</text>
+
+  <rect x="358" y="348" width="166" height="22" rx="5"
+        fill="rgba(77,140,255,0.08)" stroke="rgba(77,140,255,0.22)" stroke-width="1"/>
+  <text x="441" y="363" text-anchor="middle" font-size="9.5" fill="#b8b8d8">escalate_to_human</text>
+
+  <!-- divider -->
+  <line x1="360" y1="380" x2="522" y2="380" stroke="rgba(77,140,255,0.2)" stroke-width="1"/>
+  <text x="441" y="396" text-anchor="middle" font-size="9" fill="#5a5a90">Saves messages to DB</text>
+  <text x="441" y="412" text-anchor="middle" font-size="9" fill="#5a5a90">Marks conv. completed/escalated</text>
+  <text x="441" y="428" text-anchor="middle" font-size="9" fill="#5a5a90">Triggers signal extraction</text>
+  <text x="441" y="444" text-anchor="middle" font-size="9" fill="#5a5a90">BackgroundTask on conv. end</text>
+  <text x="441" y="460" text-anchor="middle" font-size="9" fill="#5a5a90">POST /api/chat/start · /api/chat/message</text>
+  <text x="441" y="476" text-anchor="middle" font-size="9" fill="#5a5a90">GET  /api/chat/{id}/history</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COMPONENT: SQLite Database (cylinder)   -->
+  <!-- ═══════════════════════════════════════ -->
+  <!-- left/right walls -->
+  <line x1="573" y1="178" x2="573" y2="516" stroke="rgba(139,92,246,0.55)" stroke-width="1.5"/>
+  <line x1="745" y1="178" x2="745" y2="516" stroke="rgba(139,92,246,0.55)" stroke-width="1.5"/>
+  <!-- body fill -->
+  <rect x="574" y="178" width="170" height="338" fill="rgba(7,7,30,0.97)"/>
+  <!-- bottom ellipse -->
+  <ellipse cx="659" cy="516" rx="86" ry="19"
+           fill="rgba(7,7,30,0.97)" stroke="rgba(139,92,246,0.55)" stroke-width="1.5"/>
+  <!-- top ellipse -->
+  <ellipse cx="659" cy="178" rx="86" ry="19"
+           fill="rgba(18,10,50,0.97)" stroke="rgba(139,92,246,0.7)" stroke-width="1.5"/>
+
+  <!-- DB label -->
+  <text x="659" y="208" text-anchor="middle" font-size="9" font-weight="700" fill="#8b5cf6" letter-spacing="1.5">SQLITE · SQLMODEL</text>
+  <text x="659" y="228" text-anchor="middle" font-size="13" font-weight="600" fill="#eeeeff">Data Store</text>
+
+  <line x1="585" y1="240" x2="733" y2="240" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+  <text x="591" y="259" font-size="9.5" fill="#8888b8">· conversations</text>
+  <text x="591" y="278" font-size="9.5" fill="#8888b8">· messages</text>
+  <text x="591" y="297" font-size="9.5" fill="#8888b8">· inventory</text>
+  <text x="591" y="316" font-size="9.5" fill="#8888b8">· sales_history</text>
+  <text x="591" y="335" font-size="9.5" fill="#8888b8">· signals</text>
+  <text x="591" y="354" font-size="9.5" fill="#8888b8">· forecasts</text>
+
+  <line x1="585" y1="366" x2="733" y2="366" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+  <text x="659" y="384" text-anchor="middle" font-size="9" fill="#5a5a90">GET /api/signals</text>
+  <text x="659" y="400" text-anchor="middle" font-size="9" fill="#5a5a90">GET /api/forecast</text>
+  <text x="659" y="416" text-anchor="middle" font-size="9" fill="#5a5a90">GET /api/dashboard/summary</text>
+  <text x="659" y="432" text-anchor="middle" font-size="9" fill="#5a5a90">GET /api/dashboard/sentiment</text>
+  <text x="659" y="455" text-anchor="middle" font-size="9" fill="#3a3a6a">Shared hub for all agents</text>
+  <text x="659" y="471" text-anchor="middle" font-size="9" fill="#3a3a6a">Written &amp; read by all pipeline stages</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COMPONENT: Signal Extraction Agent      -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="852" y="145" width="188" height="158" rx="10"
+        fill="rgba(7,7,30,0.95)" stroke="rgba(139,92,246,0.55)" stroke-width="1.5"/>
+  <rect x="852" y="145" width="188" height="26" rx="10" fill="rgba(139,92,246,0.12)"/>
+  <rect x="852" y="161" width="188" height="10" fill="rgba(139,92,246,0.12)"/>
+  <text x="946" y="162" text-anchor="middle" font-size="8.5" font-weight="700" fill="#8b5cf6" letter-spacing="1.5">ANTHROPIC SDK</text>
+  <text x="946" y="186" text-anchor="middle" font-size="12.5" font-weight="600" fill="#eeeeff">Signal Extraction</text>
+  <text x="946" y="204" text-anchor="middle" font-size="9.5" fill="#8888b8">Analyzes conversation transcript</text>
+  <text x="946" y="220" text-anchor="middle" font-size="9.5" fill="#8888b8">Outputs structured JSON signals</text>
+
+  <line x1="866" y1="232" x2="1026" y2="232" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+  <text x="946" y="248" text-anchor="middle" font-size="9" fill="#5a5a90">demand_expressed · availability_complaint</text>
+  <text x="946" y="264" text-anchor="middle" font-size="9" fill="#5a5a90">return_intent · price_concern · competitor</text>
+  <text x="946" y="282" text-anchor="middle" font-size="9" fill="#5a5a90">claude-haiku-4-5 (live) · keyword (mock)</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COMPONENT: Forecasting Agent            -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="852" y="340" width="188" height="170" rx="10"
+        fill="rgba(7,7,30,0.95)" stroke="rgba(0,212,160,0.55)" stroke-width="1.5"/>
+  <rect x="852" y="340" width="188" height="26" rx="10" fill="rgba(0,212,160,0.1)"/>
+  <rect x="852" y="356" width="188" height="10" fill="rgba(0,212,160,0.1)"/>
+  <text x="946" y="357" text-anchor="middle" font-size="8.5" font-weight="700" fill="#00d4a0" letter-spacing="1.5">ANTHROPIC SDK</text>
+  <text x="946" y="381" text-anchor="middle" font-size="12.5" font-weight="600" fill="#eeeeff">Forecasting Agent</text>
+  <text x="946" y="399" text-anchor="middle" font-size="9.5" fill="#8888b8">Fuses signals + inventory + sales</text>
+  <text x="946" y="415" text-anchor="middle" font-size="9.5" fill="#8888b8">Classifies risk per product×market</text>
+
+  <line x1="866" y1="427" x2="1026" y2="427" stroke="rgba(0,212,160,0.2)" stroke-width="1"/>
+  <text x="946" y="443" text-anchor="middle" font-size="9" fill="#5a5a90">critical_understock · understock</text>
+  <text x="946" y="459" text-anchor="middle" font-size="9" fill="#5a5a90">normal · overstock · critical_overstock</text>
+  <text x="946" y="475" text-anchor="middle" font-size="9" fill="#5a5a90">claude-sonnet-4-6 (live) · formula (mock)</text>
+  <text x="946" y="492" text-anchor="middle" font-size="9" fill="#5a5a90">POST /api/forecast/generate</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COMPONENT: Leadership Dashboard         -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="1072" y="145" width="204" height="420" rx="10"
+        fill="rgba(7,7,30,0.95)" stroke="rgba(0,212,160,0.55)" stroke-width="1.5"/>
+  <rect x="1072" y="145" width="204" height="26" rx="10" fill="rgba(0,212,160,0.1)"/>
+  <rect x="1072" y="161" width="204" height="10" fill="rgba(0,212,160,0.1)"/>
+  <text x="1174" y="162" text-anchor="middle" font-size="8.5" font-weight="700" fill="#00d4a0" letter-spacing="1.5">REACT · RECHARTS</text>
+  <text x="1174" y="186" text-anchor="middle" font-size="13" font-weight="600" fill="#eeeeff">Operations Intelligence</text>
+  <text x="1174" y="204" text-anchor="middle" font-size="9.5" fill="#8888b8">Employee-facing dashboard</text>
+  <text x="1174" y="220" text-anchor="middle" font-size="9" fill="#5a5a90">Route: /dashboard</text>
+
+  <line x1="1086" y1="232" x2="1262" y2="232" stroke="rgba(0,212,160,0.2)" stroke-width="1"/>
+  <text x="1174" y="250" text-anchor="middle" font-size="9" font-weight="700" fill="#5a5a90" letter-spacing="2">COMPONENTS</text>
+
+  <!-- component chips -->
+  <rect x="1086" y="258" width="180" height="22" rx="5"
+        fill="rgba(0,212,160,0.07)" stroke="rgba(0,212,160,0.2)" stroke-width="1"/>
+  <text x="1176" y="273" text-anchor="middle" font-size="9.5" fill="#b8b8d8">SentimentGauge (Recharts PieChart)</text>
+
+  <rect x="1086" y="286" width="180" height="22" rx="5"
+        fill="rgba(0,212,160,0.07)" stroke="rgba(0,212,160,0.2)" stroke-width="1"/>
+  <text x="1176" y="301" text-anchor="middle" font-size="9.5" fill="#b8b8d8">ForecastHeatmap (risk grid)</text>
+
+  <rect x="1086" y="314" width="180" height="22" rx="5"
+        fill="rgba(0,212,160,0.07)" stroke="rgba(0,212,160,0.2)" stroke-width="1"/>
+  <text x="1176" y="329" text-anchor="middle" font-size="9.5" fill="#b8b8d8">RecommendationCard</text>
+
+  <rect x="1086" y="342" width="180" height="22" rx="5"
+        fill="rgba(0,212,160,0.07)" stroke="rgba(0,212,160,0.2)" stroke-width="1"/>
+  <text x="1176" y="357" text-anchor="middle" font-size="9.5" fill="#b8b8d8">ExecutiveSummary (AI text)</text>
+
+  <rect x="1086" y="370" width="180" height="22" rx="5"
+        fill="rgba(0,212,160,0.07)" stroke="rgba(0,212,160,0.2)" stroke-width="1"/>
+  <text x="1176" y="385" text-anchor="middle" font-size="9.5" fill="#b8b8d8">SignalFeed (live signals)</text>
+
+  <line x1="1086" y1="404" x2="1262" y2="404" stroke="rgba(0,212,160,0.2)" stroke-width="1"/>
+  <text x="1174" y="421" text-anchor="middle" font-size="9" fill="#5a5a90">GET /api/forecast · /api/signals</text>
+  <text x="1174" y="437" text-anchor="middle" font-size="9" fill="#5a5a90">GET /api/dashboard/summary</text>
+  <text x="1174" y="453" text-anchor="middle" font-size="9" fill="#5a5a90">GET /api/dashboard/sentiment</text>
+  <text x="1174" y="469" text-anchor="middle" font-size="9" fill="#5a5a90">POST /api/forecast/generate</text>
+  <text x="1174" y="488" text-anchor="middle" font-size="9" fill="#3a3a6a">All data via Axios REST client</text>
+  <text x="1174" y="504" text-anchor="middle" font-size="9" fill="#3a3a6a">Vite dev server / Tailwind CSS</text>
+  <text x="1174" y="520" text-anchor="middle" font-size="9" fill="#3a3a6a">Galaxy theme + Inter font</text>
+  <text x="1174" y="536" text-anchor="middle" font-size="9" fill="#3a3a6a">Internal badge · no customer data shown</text>
+  <text x="1174" y="552" text-anchor="middle" font-size="9" fill="#3a3a6a">Market-filter support</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COMPONENT: Employee                     -->
+  <!-- ═══════════════════════════════════════ -->
+  <rect x="1304" y="288" width="118" height="88" rx="10"
+        fill="rgba(7,7,30,0.95)" stroke="rgba(0,212,160,0.38)" stroke-width="1.5"/>
+  <circle cx="1363" cy="313" r="13" fill="none" stroke="#00d4a0" stroke-width="1.5" opacity="0.7"/>
+  <path d="M1340 337 Q1363 327 1386 337" fill="none" stroke="#00d4a0" stroke-width="1.5" opacity="0.7"/>
+  <text x="1363" y="358" text-anchor="middle" font-size="11.5" font-weight="600" fill="#eeeeff">Employee</text>
+  <text x="1363" y="372" text-anchor="middle" font-size="9.5" fill="#6e7699">Operations team</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ARROWS                                          -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- 1. Customer → ChatWidget -->
+  <path d="M 130 321 L 153 321" stroke="#4d8cff" stroke-width="1.6" fill="none"
+        marker-end="url(#ab)" opacity="0.75"/>
+
+  <!-- 2. ChatWidget → Nova (SSE label) -->
+  <path d="M 315 310 L 343 285" stroke="#4d8cff" stroke-width="1.6" fill="none"
+        marker-end="url(#ab)" opacity="0.75"/>
+  <text x="310" y="297" font-size="8.5" fill="#4d8cff" opacity="0.75">SSE stream</text>
+
+  <!-- 3. Nova → SQLite (saves conv + messages) -->
+  <path d="M 537 340 L 571 310" stroke="#8b5cf6" stroke-width="1.6" fill="none"
+        marker-end="url(#ap)" opacity="0.8"/>
+  <text x="538" y="325" font-size="8" fill="#8b5cf6" opacity="0.75">saves conv</text>
+
+  <!-- 4. SQLite → Signal Extraction Agent (BackgroundTask) -->
+  <path d="M 745 218 L 850 215" stroke="#8b5cf6" stroke-width="1.6" fill="none"
+        marker-end="url(#ap)" opacity="0.8"/>
+  <text x="748" y="210" font-size="8" fill="#8b5cf6" opacity="0.75">BackgroundTask</text>
+
+  <!-- 5. Signal Extraction → SQLite (writes signals back, dashed) -->
+  <path d="M 877 303 Q 877 325 745 338" stroke="#8b5cf6" stroke-width="1.2"
+        stroke-dasharray="5,3" fill="none" marker-end="url(#apd)" opacity="0.5"/>
+  <text x="796" y="330" font-size="8" fill="#8b5cf6" opacity="0.5">saves signals</text>
+
+  <!-- 6. SQLite → Forecasting Agent -->
+  <path d="M 745 408 L 850 408" stroke="#00d4a0" stroke-width="1.6" fill="none"
+        marker-end="url(#ag)" opacity="0.75"/>
+  <text x="747" y="401" font-size="8" fill="#00d4a0" opacity="0.75">inventory + signals</text>
+
+  <!-- 7. Forecasting → SQLite (writes forecasts back, dashed) -->
+  <path d="M 877 510 Q 877 535 745 480" stroke="#00d4a0" stroke-width="1.2"
+        stroke-dasharray="5,3" fill="none" marker-end="url(#agd)" opacity="0.45"/>
+  <text x="793" y="536" font-size="8" fill="#00d4a0" opacity="0.45">saves forecasts</text>
+
+  <!-- 8. Signal Extraction → Leadership Dashboard -->
+  <path d="M 1040 222 L 1070 222" stroke="#00d4a0" stroke-width="1.6" fill="none"
+        marker-end="url(#ag)" opacity="0.75"/>
+
+  <!-- 9. Forecasting Agent → Leadership Dashboard -->
+  <path d="M 1040 425 L 1070 390" stroke="#00d4a0" stroke-width="1.6" fill="none"
+        marker-end="url(#ag)" opacity="0.75"/>
+
+  <!-- 10. Leadership Dashboard → Employee -->
+  <path d="M 1276 355 L 1302 355" stroke="#00d4a0" stroke-width="1.6" fill="none"
+        marker-end="url(#ag)" opacity="0.75"/>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER: Tech stack labels               -->
+  <!-- ═══════════════════════════════════════ -->
+  <!-- React band -->
+  <rect x="18" y="618" width="482" height="60" rx="8"
+        fill="rgba(7,7,30,0.85)" stroke="rgba(77,140,255,0.12)" stroke-width="1"/>
+  <text x="259" y="637" text-anchor="middle" font-size="9" font-weight="700" fill="#4d8cff" letter-spacing="2">REACT FRONTEND</text>
+  <text x="259" y="654" text-anchor="middle" font-size="9" fill="#5a5a90">Vite 5 · TypeScript · Tailwind CSS · Recharts · React Router v6 · Axios</text>
+  <text x="259" y="669" text-anchor="middle" font-size="9" fill="#3a3a6a">ChatWidget (customer /  ·  Operations Intelligence /dashboard)</text>
+
+  <!-- FastAPI band -->
+  <rect x="508" y="618" width="510" height="60" rx="8"
+        fill="rgba(7,7,30,0.85)" stroke="rgba(139,92,246,0.12)" stroke-width="1"/>
+  <text x="763" y="637" text-anchor="middle" font-size="9" font-weight="700" fill="#8b5cf6" letter-spacing="2">FASTAPI BACKEND</text>
+  <text x="763" y="654" text-anchor="middle" font-size="9" fill="#5a5a90">Python 3.11 · FastAPI · uvicorn · SQLModel · SQLite · Anthropic SDK</text>
+  <text x="763" y="669" text-anchor="middle" font-size="9" fill="#3a3a6a">Routers: chat · signals · forecast · dashboard  ·  USE_MOCK=true for zero-API demo</text>
+
+  <!-- Agent band -->
+  <rect x="1026" y="618" width="396" height="60" rx="8"
+        fill="rgba(7,7,30,0.85)" stroke="rgba(0,212,160,0.12)" stroke-width="1"/>
+  <text x="1224" y="637" text-anchor="middle" font-size="9" font-weight="700" fill="#00d4a0" letter-spacing="2">AI MODELS</text>
+  <text x="1224" y="654" text-anchor="middle" font-size="9" fill="#5a5a90">Nova: claude-sonnet-4-6  ·  Signal Extraction: claude-haiku-4-5</text>
+  <text x="1224" y="669" text-anchor="middle" font-size="9" fill="#3a3a6a">Forecasting: claude-sonnet-4-6  ·  Dashboard Summary: claude-haiku-4-5</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- LEGEND                                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <!-- (integrated as colored dots in corners) -->
+
+</svg>
